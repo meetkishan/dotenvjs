@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kishankachchhi/caretjs.git"
+    "url": "git+https://github.com/kishankachchhi/dotenvjs.git"
   },
   "keywords": [
     "^.js",
@@ -22,7 +22,7 @@
   "author": "kishankachchhi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kishankachchhi/caretjs/issues"
+    "url": "https://github.com/kishankachchhi/dotenvjs/issues"
   },
-  "homepage": "https://github.com/kishankachchhi/caretjs#readme"
+  "homepage": "https://github.com/kishankachchhi/dotenvjs#readme"
 }
