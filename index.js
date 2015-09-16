@@ -16,7 +16,6 @@ function Caret(){
                 }
             };
 
-            console.log(env(cfg.NAME, 'kk'));
 
         }else{
             console.warn('^.js file does not found.');
