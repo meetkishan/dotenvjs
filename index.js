@@ -18,7 +18,7 @@ function Caret(){
 
 
         }else{
-            console.warn('^.js file does not found.');
+            console.warn('.env.js file does not found.');
         }
     });
 }
