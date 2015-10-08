@@ -1,5 +1,6 @@
 var fs = require('fs');
 var read = require("fs").readFileSync;
+var cconsole = require('./lib/colorConsole');
 //var path = require('path');
 //var appDir = path.dirname(require.main.filename);
 //var caretPath = path.resolve(appDir,'../../','.env');
@@ -7,10 +8,9 @@ var config = {};
 function Env(){
     fs.exists('./.env', function(exists) {
         if (exists) {
-            console.info('.env is loaded.');
+            cconsole.info('.env file is loaded.');
         }else{
-            console.warn('.env file does not found.');
-            return 0;
+            cconsole.warn('.env file does not found.');
         }
     });
 }
@@ -31,6 +31,7 @@ Env.prototype.string = function(){
     while (++i < len) {
         if (!doc[i]) continue;
         row = doc[i].split(/\s*=\s*/);
+        process.env[row[0]] = row[1];
         config[row[0]] = row[1];
     }
 
@@ -40,9 +41,9 @@ Env.prototype.string = function(){
 Env.prototype.json = function(){
     if(JSON.parse(read('./.env').toString())){
         config = JSON.parse(read('./.env').toString());
+        return config;
     }
-
-    return config;
+    return;
 };
 
 Env.prototype.env = function (config, value) {
@@ -53,7 +54,7 @@ Env.prototype.env = function (config, value) {
     }
 };
 
-module.exports = Env;
+module.exports = new Env();
 
 
 

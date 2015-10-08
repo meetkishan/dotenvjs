@@ -10,20 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kishankachchhi/dotenvjs.git"
+    "url": "git+https://github.com/kishn/dotenvjs.git"
   },
   "keywords": [
-    ".env.js",
     "envjs",
-    "env",
+    ".env",
     "environment",
-    "global",
+    "colorconsole",
+    "console",
     "config"
   ],
   "author": "kishankachchhi",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kishankachchhi/dotenvjs/issues"
+    "url": "https://github.com/kishn/dotenvjs/issues"
   },
-  "homepage": "https://github.com/kishankachchhi/dotenvjs#readme"
+  "homepage": "https://github.com/kishn/dotenvjs#readme"
 }
