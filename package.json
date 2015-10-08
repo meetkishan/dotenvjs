@@ -1,7 +1,7 @@
 {
   "name": "dotenvjs",
   "version": "1.0.0",
-  "description": "To define environmental configuration to an application",
+  "description": "Loads environment variables from .env file to an application.",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {},
@@ -13,12 +13,16 @@
     "url": "git+https://github.com/kishn/dotenvjs.git"
   },
   "keywords": [
-    "envjs",
+    "dotenv",
+    "env",
     ".env",
     "environment",
     "colorconsole",
     "console",
-    "config"
+    "envjs",
+    "config",
+    "variables",
+    "settings"
   ],
   "author": "kishankachchhi",
   "license": "ISC",
