@@ -1,6 +1,6 @@
 {
   "name": "dotenvjs",
-  "version": "1.0.0",
+  "version": "1.0.01",
   "description": "Loads environment variables from .env file to an application.",
   "main": "index.js",
   "dependencies": {},
