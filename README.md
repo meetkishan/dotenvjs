@@ -7,13 +7,13 @@ This package is helps to provide many features with less efforts to save your de
 `npm install -S dotenvjs`
 
 ------------------------------------------
-##### .env Features
+#### .env Features
 
 You can define `.env` in `json` and normal `string` format also.
 
 Take a look of .env here.
 
-###### `.env` String Format
+##### `.env` String Format
 ```
     
     #Application settings
@@ -40,7 +40,7 @@ To use this configuration.
     process.env.SERVER_NAME
 ```
 ------------------------------------------
-###### `.env` JSON Format
+##### `.env` JSON Format
 
 ```
 
@@ -82,7 +82,7 @@ To use this configuration.
     
 ------------------------------------------
 
-##### console.color
+#### console.color
 
 You can use this functionality for colorful logging in console:
  
@@ -96,7 +96,7 @@ You can use this functionality for colorful logging in console:
     console.color.custom('magenta', 'MyCustom Msg',"Hello Test");
  ```
  
- Different Colors May Applicable:
+ Different Colors May Apply in custom:
  
     "cyan", "yellow", "green",
     "magenta", "red", "blue",
