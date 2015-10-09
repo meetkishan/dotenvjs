@@ -22,18 +22,18 @@ Take a look of .env here.
     DATABASE='mongodb://localhost/test'
     REDIS_SERVER='redis://localhost:6379/'
     
-    #Function ABC settings
-    ABC_INTERVAL=****
-    ABC _TIMEOUT=****
+    #SOCKET settings
+    SOCKET_INTERVAL=****
+    SOCKET _TIMEOUT=****
     
-    #123 configurations
-    ABC_APIKEY='***********************'
-    ABC_RETRIES=2
+    #PUSH configurations
+    PUSH_APIKEY='***********************'
+    PUSH_RETRIES=2
 ```
 
 To use this configuration. 
 
-```
+```js
     var env = require('dotenvjs').string();
     console.log(env.SERVER_NAME);
     //OR
@@ -42,7 +42,7 @@ To use this configuration.
 ------------------------------------------
 ##### `.env` JSON Format
 
-```
+```json
 
 
     {
@@ -59,12 +59,12 @@ To use this configuration.
             "url":"redis://localhost:6379/"
         },
     
-        "ABC": {
+        "socket": {
             "interval": ****,
             "timeout": ****
         },
     
-        "123ABC":{
+        "pushNotification":{
             "apikey": "***********************",
             "retries": 2
         }
@@ -74,7 +74,7 @@ To use this configuration.
 
 To use this configuration.
 
-```
+```js
     var env = require('dotenvjs').json();
     env.serverName;
     env.database.url;
@@ -88,7 +88,7 @@ You can use this functionality for colorful logging in console:
  
  Simply write :
  
- ```
+ ```js
     console.color.log('This is a simple log');
     console.color.info('This is an info');
     console.color.warn('This is a warning');
@@ -98,7 +98,15 @@ You can use this functionality for colorful logging in console:
  
  Different Colors May Apply in custom:
  
-    "cyan", "yellow", "green",
-    "magenta", "red", "blue",
-    "bright_cyan", "bright_yellow", "bright_green",
-    "bright_magenta", "bright_red", "bright_blue"
+    'cyan',
+    'yellow',
+    'green',
+    'magenta',
+    'red',
+    'blue',
+    'bright_cyan',
+    'bright_yellow',
+    'bright_green',
+    'bright_magenta',
+    'bright_red',
+    'bright_blue'
