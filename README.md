@@ -1,3 +1,5 @@
+[![NPM](https://nodei.co/npm/dotenvjs.png?downloads=true)](https://nodei.co/npm/dotenvjs/)
+
 # dotenvjs
 
 dotenvjs is helps to get flavored with feature of .env and console.color.
@@ -24,7 +26,7 @@ Take a look of .env here.
     
     #SOCKET settings
     SOCKET_INTERVAL=****
-    SOCKET _TIMEOUT=****
+    SOCKET_TIMEOUT=****
     
     #PUSH configurations
     PUSH_APIKEY='***********************'
@@ -82,6 +84,13 @@ To use this configuration.
     
 ------------------------------------------
 
+#### Custom environment file
+
+Start filename with `.env` & specify file name with commandline argument.
+
+`>> node server.js .env.development`
+
+------------------------------------------
 #### console.color
 
 You can use this functionality for colorful logging in console:
