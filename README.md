@@ -1,5 +1,3 @@
-[![NPM](https://nodei.co/npm/dotenvjs.png?downloads=true)](https://nodei.co/npm/dotenvjs/)
-
 # dotenvjs
 
 dotenvjs is helps to get flavored with feature of .env and console.color.

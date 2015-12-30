@@ -1,14 +1,13 @@
 var fs = require('fs');
 var read = require("fs").readFileSync;
-var cconsole = require('./lib/colorConsole');
 var fileName = '.env';
+var cconsole = require('./lib/colorConsole');
 //var path = require('path');
 //var appDir = path.dirname(require.main.filename);
 //var caretPath = path.resolve(appDir,'../../','.envjson');
 var config = {};
 function Env(){
     process.argv.forEach(function (val, index, array) {
-        console.log(index + ': ' + val);
         if(new RegExp(/^\.env*/i).test(val)){
             fileName = val;
         }
@@ -16,9 +15,9 @@ function Env(){
 
     fs.exists('./'+fileName, function(exists) {
         if (exists) {
-            cconsole.info(fileName+' file is loaded.');
+            console.info(fileName+' file has loaded.');
         }else{
-            cconsole.warn(fileName+'file does not found.');
+            console.warn(fileName+'file does not found.');
         }
     });
 }
@@ -66,12 +65,23 @@ Env.prototype.string = function(){
     return config;
 };
 
+function IsJsonString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
+
 Env.prototype.json = function(){
-    if(JSON.parse(read('./'+fileName).toString())){
+    var fileData = read('./'+fileName).toString();
+    if(IsJsonString(fileData)){
         config = JSON.parse(read('./'+fileName).toString());
         return config;
+    }else{
+        console.error('Invalid JSON format of '+fileName);
     }
-    return;
 };
 
 Env.prototype.env = function (config, value) {
